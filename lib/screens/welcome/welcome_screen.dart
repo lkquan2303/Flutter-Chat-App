@@ -1,13 +1,26 @@
+import 'package:chat_app/constants/constants.dart';
+import 'package:chat_app/constants/size_config.dart';
 import 'package:flutter/material.dart';
 
+import 'package:flutter_svg/flutter_svg.dart';
+
 class WelcomeScreen extends StatelessWidget {
+  static String routeName = '/welcome';
+
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            Image.asset('assets/images/welcome_image.png'),
+            Spacer(
+              flex: 1,
+            ),
+            SvgPicture.asset(
+              'assets/images/flash_image.svg',
+              height: getProportionateScreenWidth(300),
+            ),
             Text(
               'Welcome to our freedom \nmessaging app',
               textAlign: TextAlign.center,
@@ -15,6 +28,9 @@ class WelcomeScreen extends StatelessWidget {
                   .textTheme
                   .headline5
                   .copyWith(fontWeight: FontWeight.bold),
+            ),
+            Spacer(
+              flex: 1,
             ),
             Text(
               'Freedom talk any ferson of your \nmother language',
@@ -26,6 +42,9 @@ class WelcomeScreen extends StatelessWidget {
                     .color
                     .withOpacity(0.64),
               ),
+            ),
+            Spacer(
+              flex: 4,
             ),
             FittedBox(
               child: TextButton(
@@ -42,6 +61,7 @@ class WelcomeScreen extends StatelessWidget {
                                 .withOpacity(0.8),
                           ),
                     ),
+                    SizedBox(width: kDefaultPadding / 4),
                     Icon(Icons.arrow_forward_ios,
                         size: 16,
                         color: Theme.of(context)
@@ -52,6 +72,9 @@ class WelcomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            Spacer(
+              flex: 2,
             ),
           ],
         ),
