@@ -1,5 +1,6 @@
 import 'package:chat_app/constants/constants.dart';
 import 'package:chat_app/constants/size_config.dart';
+import 'package:chat_app/screens/authentication/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
@@ -48,7 +49,8 @@ class WelcomeScreen extends StatelessWidget {
             ),
             FittedBox(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () =>
+                    Navigator.pushNamed(context, SignInScreen.routName),
                 child: Row(
                   children: [
                     Text(
@@ -62,13 +64,15 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                     ),
                     SizedBox(width: kDefaultPadding / 4),
-                    Icon(Icons.arrow_forward_ios,
-                        size: 16,
-                        color: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .color
-                            .withOpacity(0.8))
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                      color: Theme.of(context)
+                          .textTheme
+                          .bodyText1
+                          .color
+                          .withOpacity(0.8),
+                    ),
                   ],
                 ),
               ),
