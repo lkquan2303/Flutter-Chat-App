@@ -1,10 +1,11 @@
-import 'package:chat_app/components/social_sign_in.dart';
+import 'package:flutter/material.dart';
+
 import 'package:chat_app/constants/constants.dart';
 import 'package:chat_app/constants/size_config.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'components/image_deco_login.dart';
+import 'components/social_sign_in.dart';
 
 class SignInScreen extends StatelessWidget {
   static String routName = "/sign_in";
@@ -17,7 +18,7 @@ class SignInScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: getProportionateScreenHeight(400),
+                height: getProportionateScreenHeight(380),
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/background.png'),
@@ -60,11 +61,13 @@ class SignInScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
+              //*<----------- User Validation ----------->
               Padding(
                 padding: EdgeInsets.all(getProportionateScreenHeight(30)),
                 child: Column(
                   children: [
-                    //<---------- User Email ---------->
+                    //*<---------- User Email ---------->
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
@@ -88,7 +91,7 @@ class SignInScreen extends StatelessWidget {
                     SizedBox(
                       height: getProportionateScreenHeight(10),
                     ),
-                    //<---------- User Password ---------->
+                    //*<---------- User Password ---------->
                     TextFormField(
                       obscureText: true,
                       keyboardType: TextInputType.emailAddress,
@@ -147,24 +150,27 @@ class SignInScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(
+                      height: getProportionateScreenHeight(20),
+                    ),
+                    //*<--------- Social Login -------->
+                    SocialSignIn(),
+                    SizedBox(
+                      height: getProportionateScreenHeight(20),
+                    ),
+                    //*Register
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SvgPicture.asset("assets/icons/google-icon.svg", height: 30, width: 30,),
-                        // SocialSignIn(
-                        //   image: "assets/icons/google-icon.svg",
-                        //   onPress: () {},
-                        // ),
-                        // SocialSignIn(
-                        //   image: "assets/icons/Phone.svg",
-                        //   onPress: () {},
-                        // ),
-                        // SocialSignIn(
-                        //   image: "assets/icons/twitter.svg",
-                        //   onPress: () {},
-                        // ),
+                        Text("Don't have an account? "),
+                        InkWell(
+                          child: Text(
+                            "Sign Up",
+                            style: TextStyle(color: kPrimaryColor),
+                          ),
+                        )
                       ],
-                    ),
+                    )
                   ],
                 ),
               )
