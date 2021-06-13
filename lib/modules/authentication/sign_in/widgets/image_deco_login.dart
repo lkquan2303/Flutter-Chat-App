@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 class ImageDecoLogin extends StatelessWidget {
   const ImageDecoLogin(
-      {Key key,
-      @required this.imageName,
-      @required this.width,
-      @required this.height,
-      @required this.leftPosited})
+      {Key? key,
+      required this.imageName,
+      required this.width,
+      required this.height,
+      required this.leftPosited})
       : super(key: key);
 
   final String imageName;

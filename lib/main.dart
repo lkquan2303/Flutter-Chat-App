@@ -1,7 +1,10 @@
-import 'package:chat_app/constants/theme.dart';
-import 'package:chat_app/routes/routes.dart';
-import 'package:chat_app/screens/welcome/welcome_screen.dart';
+// @dart=2.9
 import 'package:flutter/material.dart';
+
+import 'package:chat_app/config/themes/theme.dart';
+import 'package:chat_app/config/routes/routes.dart';
+
+import 'modules/welcome/screens/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
