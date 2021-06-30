@@ -1,4 +1,5 @@
 import 'package:chat_app/modules/home_page/widgets/user_card.dart';
+import 'package:chat_app/modules/messages/screens/messages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:chat_app/constants/constants.dart';
@@ -35,7 +36,8 @@ class BodyChat extends StatelessWidget {
           child: ListView.builder(
             itemBuilder: (context, index) => UserCard(
               chat: chatsData[index],
-              press: () {},
+              press: () =>
+                  Navigator.pushNamed(context, MessagesScreen.routeName),
             ),
             itemCount: chatsData.length,
           ),
