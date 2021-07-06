@@ -1,10 +1,10 @@
-import 'package:chat_app/modules/home_page/widgets/user_card.dart';
-import 'package:chat_app/modules/messages/screens/messages.dart';
 import 'package:flutter/material.dart';
 
-import 'package:chat_app/constants/constants.dart';
-import 'package:chat_app/widgets/filled_outline_button.dart';
-import 'package:chat_app/modules/home_page/models/Chat.dart';
+import '../../../constants/constants.dart';
+import '../../../widgets/filled_outline_button.dart';
+import '../../messages/screens/messages.dart';
+import '../models/Chat.dart';
+import '../widgets/user_card.dart';
 
 class BodyChat extends StatelessWidget {
   @override
@@ -13,15 +13,15 @@ class BodyChat extends StatelessWidget {
       children: [
         Container(
           color: kPrimaryColor,
-          padding: EdgeInsets.fromLTRB(
+          padding: const EdgeInsets.fromLTRB(
               kDefaultPadding, 0, kDefaultPadding, kDefaultPadding / 1.5),
           child: Row(
             children: [
               FillOutlineButton(
                 press: () {},
-                text: "Recent Message ",
+                text: 'Recent Message ',
               ),
-              SizedBox(
+              const SizedBox(
                 width: kDefaultPadding,
               ),
               FillOutlineButton(

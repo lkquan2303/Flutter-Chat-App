@@ -1,10 +1,10 @@
-import 'package:chat_app/modules/authentication/sign_in/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'package:chat_app/constants/constants.dart';
-import 'package:chat_app/constants/size_config.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../constants/constants.dart';
+import '../../../constants/size_config.dart';
+import '../../authentication/sign_in/screens/sign_in_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static String routeName = '/welcome';
@@ -16,7 +16,7 @@ class WelcomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             SvgPicture.asset(
@@ -31,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
                   .headline5!
                   .copyWith(fontWeight: FontWeight.bold),
             ),
-            Spacer(
+            const Spacer(
               flex: 1,
             ),
             Text(
@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                     .withOpacity(0.64),
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 4,
             ),
             FittedBox(
@@ -64,7 +64,7 @@ class WelcomeScreen extends StatelessWidget {
                                 .withOpacity(0.8),
                           ),
                     ),
-                    SizedBox(width: kDefaultPadding / 4),
+                    const SizedBox(width: kDefaultPadding / 4),
                     Icon(
                       Icons.arrow_forward_ios,
                       size: 16,
@@ -78,7 +78,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 2,
             ),
           ],

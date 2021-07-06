@@ -1,10 +1,11 @@
-import 'package:chat_app/constants/constants.dart';
-import 'package:chat_app/constants/size_config.dart';
-import 'package:chat_app/modules/authentication/sign_in/widgets/social_sign_in.dart';
-import 'package:chat_app/modules/home_page/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../../constants/constants.dart';
+import '../../../../constants/size_config.dart';
+import '../../sign_up/screens/sign_up_screen.dart';
+import 'social_sign_in.dart';
 
 class UserValidation extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
@@ -27,14 +28,14 @@ class UserValidation extends StatelessWidget {
                 if (val!.isEmpty) {
                   return kAddressNullError;
                 }
-                if (!emailValidatorRegExp.hasMatch(val!)) {
+                if (!emailValidatorRegExp.hasMatch(val)) {
                   return kInvalidEmailError;
                 }
               },
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
-                hintText: "Your email or phone number",
-                labelText: "Email",
+                hintText: 'Your email or phone number',
+                labelText: 'Email',
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 prefixIcon: Container(
                   padding: EdgeInsets.fromLTRB(
@@ -44,7 +45,7 @@ class UserValidation extends StatelessWidget {
                     getProportionateScreenWidth(16),
                   ),
                   child: SvgPicture.asset(
-                    "assets/icons/Mail.svg",
+                    'assets/icons/Mail.svg',
                     height: getProportionateScreenHeight(10),
                   ),
                 ),
@@ -66,8 +67,8 @@ class UserValidation extends StatelessWidget {
               obscureText: true,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
-                hintText: "Your password",
-                labelText: "Password",
+                hintText: 'Your password',
+                labelText: 'Password',
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 prefixIcon: Container(
                   padding: EdgeInsets.fromLTRB(
@@ -77,7 +78,7 @@ class UserValidation extends StatelessWidget {
                     getProportionateScreenWidth(16),
                   ),
                   child: SvgPicture.asset(
-                    "assets/icons/Lock.svg",
+                    'assets/icons/Lock.svg',
                     height: getProportionateScreenHeight(10),
                   ),
                 ),
@@ -92,7 +93,7 @@ class UserValidation extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "Forgot password",
+                    'Forgot password',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: Colors.black.withOpacity(0.5),
@@ -118,9 +119,9 @@ class UserValidation extends StatelessWidget {
                   color: kPrimaryColor,
                   borderRadius: BorderRadius.circular(25),
                 ),
-                padding: EdgeInsets.symmetric(vertical: 10),
-                child: Text(
-                  "Login",
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: const Text(
+                  'Login',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -133,7 +134,7 @@ class UserValidation extends StatelessWidget {
             ),
 
             //*<--------- Social Login -------->
-            SocialSignIn(),
+            const SocialSignIn(),
             SizedBox(
               height: getProportionateScreenHeight(20),
             ),
@@ -142,10 +143,12 @@ class UserValidation extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account? "),
+                const Text("Don't have an account? "),
                 InkWell(
-                  child: Text(
-                    "Sign Up",
+                  onTap: () =>
+                      Navigator.pushNamed(context, SignUpScreen.routName),
+                  child: const Text(
+                    'Sign Up',
                     style: TextStyle(color: kPrimaryColor),
                   ),
                 )

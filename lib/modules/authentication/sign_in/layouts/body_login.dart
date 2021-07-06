@@ -1,6 +1,7 @@
-import 'package:chat_app/modules/authentication/sign_in/widgets/top_sign_in_image.dart';
-import 'package:chat_app/modules/authentication/sign_in/widgets/user_validation.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/top_sign_in_image.dart';
+import '../widgets/user_validation.dart';
 
 class BodyLogin extends StatelessWidget {
   const BodyLogin({
@@ -14,7 +15,7 @@ class BodyLogin extends StatelessWidget {
         child: Column(
           children: [
             //*<----------- Sign In Top Image ----------->
-            TopSignInImage(),
+            const TopSignInImage(),
 
             //*<----------- User Validation ----------->
             UserValidation()

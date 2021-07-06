@@ -1,8 +1,8 @@
-import 'package:chat_app/modules/home_page/widgets/floating_action_button.dart';
 import 'package:flutter/material.dart';
 
-import 'package:chat_app/modules/home_page/layouts/app_bar.dart';
-import 'package:chat_app/modules/home_page/layouts/body_chat.dart';
+import '../layouts/app_bar.dart';
+import '../layouts/body_chat.dart';
+import '../widgets/floating_action_button.dart';
 
 class ChatScreen extends StatefulWidget {
   static String routeName = '/chat_screen';
@@ -28,16 +28,18 @@ class _ChatScreenState extends State<ChatScreen> {
             _selectedIndex = index;
           });
         },
+        // ignore: prefer_const_literals_to_create_immutables
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: "Chats"),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
-          BottomNavigationBarItem(
+          // ignore: lines_longer_than_80_chars
+          const BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Chats'),
+          const BottomNavigationBarItem(icon: Icon(Icons.people), label: 'People'),
+          const BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Calls'),
+          const BottomNavigationBarItem(
             icon: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/user_2.png"),
+              backgroundImage: AssetImage('assets/images/user_2.png'),
               radius: 20,
             ),
-            label: "Profile",
+            label: 'Profile',
           ),
         ],
       ),

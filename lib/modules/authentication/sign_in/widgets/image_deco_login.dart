@@ -1,14 +1,14 @@
-import 'package:chat_app/constants/size_config.dart';
 import 'package:flutter/material.dart';
+import '../../../../constants/size_config.dart';
 
 class ImageDecoLogin extends StatelessWidget {
-  const ImageDecoLogin(
-      {Key? key,
-      required this.imageName,
-      required this.width,
-      required this.height,
-      required this.leftPosited})
-      : super(key: key);
+  const ImageDecoLogin({
+    Key? key,
+    required this.imageName,
+    required this.width,
+    required this.height,
+    required this.leftPosited,
+  }) : super(key: key);
 
   final String imageName;
   final int width;

@@ -1,7 +1,8 @@
-import 'package:chat_app/constants/constants.dart';
-import 'package:chat_app/constants/size_config.dart';
-import 'package:chat_app/modules/home_page/models/Chat.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constants/constants.dart';
+import '../../../constants/size_config.dart';
+import '../models/Chat.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({
@@ -62,7 +63,7 @@ class UserCard extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Opacity(
