@@ -26,7 +26,7 @@ class BodyChat extends StatelessWidget {
               ),
               FillOutlineButton(
                 press: () {},
-                text: "Active ",
+                text: 'Active ',
                 isFilled: false,
               ),
             ],
