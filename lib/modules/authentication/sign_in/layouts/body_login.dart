@@ -11,6 +11,7 @@ class BodyLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      // ignore: avoid_unnecessary_containers
       child: Container(
         child: Column(
           children: [

@@ -6,8 +6,11 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: BodyLogin(),
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: const Scaffold(
+        body: BodyLogin(),
+      ),
     );
   }
 }

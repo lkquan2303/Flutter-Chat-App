@@ -10,6 +10,9 @@ import 'social_sign_in.dart';
 class UserValidation extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
 
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
   signIn() {
     formKey.currentState!.validate();
   }
@@ -24,6 +27,7 @@ class UserValidation extends StatelessWidget {
           children: [
             //*<---------- User Email ---------->
             TextFormField(
+              controller: _emailController,
               validator: (val) {
                 if (val!.isEmpty) {
                   return kAddressNullError;
@@ -56,6 +60,7 @@ class UserValidation extends StatelessWidget {
             ),
             //*<---------- User Password ---------->
             TextFormField(
+              controller: _passwordController,
               validator: (val) {
                 if (val!.isEmpty) {
                   return kPassNullError;

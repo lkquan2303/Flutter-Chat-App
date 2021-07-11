@@ -12,106 +12,133 @@ class BodySignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenHeight(25),
-          vertical: getProportionateScreenHeight(20),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            IconButton(
-              alignment: Alignment.topLeft,
-              onPressed: () => Navigator.pop(context),
-              icon: const Icon(Icons.arrow_back_ios),
-            ),
-            Container(
-              height: getProportionateScreenHeight(250),
-              width: double.infinity,
-              child: SvgPicture.asset(
-                'assets/images/sign_up_deco.svg',
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: getProportionateScreenHeight(25),
+            vertical: getProportionateScreenHeight(20),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(
+                alignment: Alignment.topLeft,
+                onPressed: () => Navigator.pop(context),
+                icon: const Icon(Icons.arrow_back_ios),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                // floatingLabelBehavior: FloatingLabelBehavior.always,
-                hintText: 'Type your account',
-                labelText: 'Account',
-              ),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                // floatingLabelBehavior: FloatingLabelBehavior.always,
-                hintText: 'Type your password',
-                labelText: 'Password',
-              ),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                // floatingLabelBehavior: FloatingLabelBehavior.always,
-                hintText: 'Re-Type your password',
-                labelText: 'Re-Password',
-              ),
-            ),
-            SizedBox(
-              height: getProportionateScreenHeight(40),
-            ),
-            InkWell(
-              onTap: () {},
-              child: Container(
+              Container(
+                height: getProportionateScreenHeight(250),
                 width: double.infinity,
-                height: getProportionateScreenHeight(35),
-                decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(15),
+                child: SvgPicture.asset(
+                  'assets/images/sign_up_deco.svg',
                 ),
-                child: Center(
-                  child: Text(
-                    'Sign up',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: getProportionateScreenHeight(15),
-                      fontWeight: FontWeight.bold,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  // floatingLabelBehavior: FloatingLabelBehavior.always,
+                  hintText: 'Type your account',
+                  labelText: 'Account',
+                ),
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  // floatingLabelBehavior: FloatingLabelBehavior.always,
+                  hintText: 'Type your password',
+                  labelText: 'Password',
+                ),
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  // floatingLabelBehavior: FloatingLabelBehavior.always,
+                  hintText: 'Re-Type your password',
+                  labelText: 'Re-Password',
+                ),
+              ),
+              SizedBox(
+                height: getProportionateScreenHeight(40),
+              ),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  width: double.infinity,
+                  height: getProportionateScreenHeight(35),
+                  decoration: BoxDecoration(
+                    color: kPrimaryColor,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Sign up',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: getProportionateScreenHeight(15),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: getProportionateScreenHeight(40),
-            ),
-            const SocialSignIn(),
-            SizedBox(
-              height: getProportionateScreenHeight(40),
-            ),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              SizedBox(
+                height: getProportionateScreenHeight(30),
+              ),
+              Row(
                 children: [
-                  Text(
-                    'You already an account? ',
-                    style: TextStyle(
-                      fontSize: getProportionateScreenHeight(15),
+                  const Expanded(
+                    child: Divider(
+                      height: 10,
+                      thickness: 1,
+                      color: Colors.black54,
                     ),
                   ),
-                  InkWell(
-                    onTap: () => Navigator.pop(context),
-                    child: Text(
-                      'Sign in',
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text('Or'),
+                  ),
+                  const Expanded(
+                    child: Divider(
+                      height: 10,
+                      thickness: 1,
+                      color: Colors.black54,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: getProportionateScreenHeight(10),
+              ),
+              const SocialSignIn(),
+              SizedBox(
+                height: getProportionateScreenHeight(40),
+              ),
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'You already an account? ',
                       style: TextStyle(
-                        color: kPrimaryColor,
-                        fontWeight: FontWeight.bold,
                         fontSize: getProportionateScreenHeight(15),
                       ),
                     ),
-                  )
-                ],
-              ),
-            )
-          ],
+                    InkWell(
+                      onTap: () => Navigator.pop(context),
+                      child: Text(
+                        'Sign in',
+                        style: TextStyle(
+                          color: kPrimaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: getProportionateScreenHeight(15),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
