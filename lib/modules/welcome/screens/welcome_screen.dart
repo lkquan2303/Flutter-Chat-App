@@ -1,10 +1,10 @@
+import 'package:chat_app/modules/authentication/sign_in/views/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants/constants.dart';
 import '../../../constants/size_config.dart';
-import '../../authentication/sign_in/screens/sign_in_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static String routeName = '/welcome';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../constants/size_config.dart';
 
+import '../../../../../constants/size_config.dart';
 import 'image_deco_login.dart';
 
 class TopSignInImage extends StatelessWidget {

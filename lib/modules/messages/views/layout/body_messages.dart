@@ -1,9 +1,10 @@
-import 'package:chat_app/constants/constants.dart';
-import 'package:chat_app/constants/size_config.dart';
-import 'package:chat_app/modules/messages/models/ChatMessage.dart';
-import 'package:chat_app/modules/messages/widgets/chat_input_field.dart';
-import 'package:chat_app/modules/messages/widgets/text_message.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../constants/constants.dart';
+import '../../../../constants/size_config.dart';
+import '../../models/ChatMessage.dart';
+import '../widgets/chat_input_field.dart';
+import '../widgets/text_message.dart';
 
 class BodyMessages extends StatelessWidget {
   const BodyMessages({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class BodyMessages extends StatelessWidget {
             ),
           ),
         ),
-        ChatInputField()
+        const ChatInputField()
       ],
     );
   }
@@ -47,7 +48,7 @@ class Messages extends StatelessWidget {
         case ChatMessageType.audio:
           return AudioMessage(chatMessages: message);
         default:
-          return SizedBox();
+          return const SizedBox();
       }
     }
 

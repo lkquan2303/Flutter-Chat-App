@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../constants/size_config.dart';
+import '../../../../../constants/size_config.dart';
 
 class SocialSignIn extends StatelessWidget {
   const SocialSignIn({

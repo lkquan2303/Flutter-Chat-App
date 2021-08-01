@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/constants.dart';
-import '../../../widgets/filled_outline_button.dart';
-import '../../messages/screens/messages.dart';
-import '../models/Chat.dart';
+import '../../../../constants/constants.dart';
+import '../../../../widgets/filled_outline_button.dart';
+import '../../../messages/views/screens/messages.dart';
+import '../../models/Chat.dart';
 import '../widgets/user_card.dart';
 
 class BodyChat extends StatelessWidget {

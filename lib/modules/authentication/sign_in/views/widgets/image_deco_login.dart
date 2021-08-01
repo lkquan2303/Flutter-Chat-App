@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../constants/size_config.dart';
+
+import '../../../../../constants/size_config.dart';
 
 class ImageDecoLogin extends StatelessWidget {
   const ImageDecoLogin({

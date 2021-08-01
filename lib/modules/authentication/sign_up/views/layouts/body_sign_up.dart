@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../constants/constants.dart';
-import '../../../../constants/size_config.dart';
-import '../../sign_in/widgets/social_sign_in.dart';
+import '../../../../../constants/constants.dart';
+import '../../../../../constants/size_config.dart';
+import '../../../sign_in/views/widgets/social_sign_in.dart';
 
 class BodySignUp extends StatelessWidget {
   const BodySignUp({Key? key}) : super(key: key);

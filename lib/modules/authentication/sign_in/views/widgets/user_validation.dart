@@ -1,10 +1,10 @@
+import 'package:chat_app/modules/authentication/sign_up/views/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../constants/constants.dart';
-import '../../../../constants/size_config.dart';
-import '../../sign_up/screens/sign_up_screen.dart';
+import '../../../../../constants/constants.dart';
+import '../../../../../constants/size_config.dart';
 import 'social_sign_in.dart';
 
 class UserValidation extends StatelessWidget {
