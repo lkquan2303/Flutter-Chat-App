@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-AppBar buildAppBar() {
+AppBar buildChatAppBar() {
   return AppBar(
     automaticallyImplyLeading: false,
     title: const Text('Chats'),

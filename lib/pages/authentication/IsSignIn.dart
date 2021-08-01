@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
-import '../home_page/views/screens/chat_screen.dart';
+import '../dash_board/views/screens/dash_board_screen.dart';
 import '../welcome/screens/welcome_screen.dart';
 import 'controller/firebase_controller.dart';
 

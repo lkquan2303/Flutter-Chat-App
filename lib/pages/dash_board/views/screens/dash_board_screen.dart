@@ -1,23 +1,22 @@
-import 'package:chat_app/pages/profile/views/layouts/profile_body.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../constants/constants.dart';
 import '../../controller/home_page_controller.dart';
-import '../layouts/app_bar.dart';
-import '../layouts/chat_body.dart';
+import '../bottom_navigation_bar_item/chat_screen/layouts/chat_app_bar.dart';
+import '../bottom_navigation_bar_item/chat_screen/layouts/chat_body.dart';
+import '../bottom_navigation_bar_item/profile_screen/layouts/profile_body.dart';
 import '../widgets/floating_action_button.dart';
 
 class ChatScreen extends StatelessWidget {
   static String routeName = '/chat_screen';
 
-  // final homepageController = Get.find<HomePageController>();
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomePageController>(builder: (controller) {
       return Scaffold(
-        appBar: buildAppBar(),
+        appBar:
+            controller.bottomNavigationBarIndex == 0 ? buildChatAppBar() : null,
         body: SafeArea(
           child: IndexedStack(
             index: controller.bottomNavigationBarIndex,

@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
-import '../../home_page/views/screens/chat_screen.dart';
+import '../../dash_board/views/screens/dash_board_screen.dart';
 import '../sign_in/views/screens/sign_in_screen.dart';
 
 class FirebaseController extends GetxController {

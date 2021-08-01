@@ -2,7 +2,7 @@ import 'package:chat_app/constants/constants.dart';
 import 'package:chat_app/constants/size_config.dart';
 import 'package:flutter/material.dart';
 
-AppBar buildAppBar() {
+AppBar buildMessageAppBar() {
   return AppBar(
     automaticallyImplyLeading: false,
     title: Row(

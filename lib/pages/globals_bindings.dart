@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 import 'authentication/controller/firebase_controller.dart';
-import 'home_page/controller/home_page_controller.dart';
+import 'dash_board/controller/home_page_controller.dart';
 
 class GlobalsBindings extends Bindings {
   @override

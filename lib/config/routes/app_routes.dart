@@ -3,7 +3,7 @@ import 'package:get/route_manager.dart';
 
 import '../../pages/authentication/sign_in/views/screens/sign_in_screen.dart';
 import '../../pages/authentication/sign_up/views/screens/sign_up_screen.dart';
-import '../../pages/home_page/views/screens/chat_screen.dart';
+import '../../pages/dash_board/views/screens/dash_board_screen.dart';
 import '../../pages/messages/views/screens/messages.dart';
 import '../../pages/welcome/screens/welcome_screen.dart';
 
