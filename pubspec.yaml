@@ -28,6 +28,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   equatable: ^2.0.3
   firebase_auth: ^1.4.1
+  firebase_core: ^1.4.0
   flutter_svg: ^0.19.2
   get: ^4.1.4
   google_fonts: ^2.1.0
