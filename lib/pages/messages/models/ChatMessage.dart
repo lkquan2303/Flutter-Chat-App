@@ -7,6 +7,7 @@ class ChatMessage {
   final MessageStatus messageStatus;
   final bool isSender;
 
+  // ignore: sort_constructors_first
   ChatMessage({
     this.text = '',
     required this.messageType,

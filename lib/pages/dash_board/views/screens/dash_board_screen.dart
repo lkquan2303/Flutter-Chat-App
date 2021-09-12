@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../constants/constants.dart';
-import '../../controller/home_page_controller.dart';
+import '../../controller/dash_board_controller.dart';
 import '../bottom_navigation_bar_item/chat_screen/layouts/chat_app_bar.dart';
 import '../bottom_navigation_bar_item/chat_screen/layouts/chat_body.dart';
 import '../bottom_navigation_bar_item/profile_screen/layouts/profile_body.dart';
@@ -13,7 +13,7 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomePageController>(builder: (controller) {
+    return GetBuilder<DashBoardController>(builder: (controller) {
       return Scaffold(
         appBar:
             controller.bottomNavigationBarIndex == 0 ? buildChatAppBar() : null,

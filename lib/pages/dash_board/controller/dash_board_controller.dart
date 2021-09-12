@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class HomePageController extends GetxController {
+class DashBoardController extends GetxController {
   int bottomNavigationBarIndex = 0;
 
   // ignore: use_setters_to_change_properties
