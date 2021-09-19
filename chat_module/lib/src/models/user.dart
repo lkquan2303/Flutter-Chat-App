@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class User {
   String? id;
   String userName;
