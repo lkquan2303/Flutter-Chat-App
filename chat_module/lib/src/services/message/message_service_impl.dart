@@ -61,9 +61,10 @@ class MessageService implements IMessageService {
               final message = _messageFromFeed(feedData);
               _controller?.sink.add(message);
               _removeDeliverredMessage(message);
-              // ignore: avoid_print
             })
+            // ignore: avoid_print
             .catchError(print)
+            // ignore: avoid_print
             .onError((err, stackTrace) => print(err));
       });
 

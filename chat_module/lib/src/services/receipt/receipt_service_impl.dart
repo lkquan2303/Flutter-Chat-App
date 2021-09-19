@@ -1,9 +1,11 @@
 import 'dart:async';
 
-import 'package:chat_module/src/models/receipt.dart';
-import 'package:chat_module/src/models/user.dart';
-import 'package:chat_module/src/services/receipt/receipt_service_contract.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:rethinkdb_dart/rethinkdb_dart.dart';
+
+import '../../models/receipt.dart';
+import '../../models/user.dart';
+import 'receipt_service_contract.dart';
 
 class ReceipService implements IReceiptService {
   final Connection _connection;
@@ -33,7 +35,6 @@ class ReceipService implements IReceiptService {
   @override
   Future<bool> send(Receipt receipt) async {
     final data = receipt.toJson();
-
     final record = await r.table('receipts').insert(data).run(_connection);
     return record['inserted'] == 1;
   }
