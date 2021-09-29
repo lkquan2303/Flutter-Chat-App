@@ -33,7 +33,7 @@ void main() {
       recipient: '1234',
       messageId: '12345',
       status: ReceiptStatus.deliverred,
-      timeStamp: DateTime.now(),
+      timestamp: DateTime.now(),
     );
 
     final res = await sut!.send(receipt);
@@ -49,14 +49,14 @@ void main() {
       recipient: user.id!,
       messageId: '1234',
       status: ReceiptStatus.deliverred,
-      timeStamp: DateTime.now(),
+      timestamp: DateTime.now(),
     );
 
     final anotherReceipt = Receipt(
       recipient: user.id!,
       messageId: '3214',
       status: ReceiptStatus.read,
-      timeStamp: DateTime.now(),
+      timestamp: DateTime.now(),
     );
 
     await sut!.send(receipt);

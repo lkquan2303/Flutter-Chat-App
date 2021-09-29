@@ -1,3 +1,5 @@
 docker container prune
 docker run -d -p 8080:8080 -p 28015:28015 rethinkdb
 docker container start
+
+flutter create --template=package

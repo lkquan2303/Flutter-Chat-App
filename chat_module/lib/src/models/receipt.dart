@@ -15,7 +15,7 @@ class Receipt {
   final String recipient;
   final String messageId;
   final ReceiptStatus status;
-  final DateTime timeStamp;
+  final DateTime timestamp;
   String? _id;
   String get id => _id!;
 
@@ -24,14 +24,14 @@ class Receipt {
     required this.recipient,
     required this.messageId,
     required this.status,
-    required this.timeStamp,
+    required this.timestamp,
   });
 
   Map<String, dynamic> toJson() => {
         'recipient': recipient,
         'messageId': messageId,
         'stataus': status.value(),
-        'timeStamp': timeStamp,
+        'timestamp': timestamp,
       };
 
   // ignore: sort_constructors_first
@@ -40,7 +40,7 @@ class Receipt {
       recipient: json['recipient'],
       messageId: json['messageId'],
       status: EnumParsing.fromString(json['status']),
-      timeStamp: json['timeStamp'],
+      timestamp: json['timestamp'],
     );
     // ignore: cascade_invocations
     receipt._id = json['id'];
